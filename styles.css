@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Itim", cursive;
+    font-style: normal;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.418);
+}
+body
+{
+  overflow-x: hidden;
+}
+.logo{
+    color: #229889;
+    font-size: 3rem;
+    margin-left: 25px;
+    margin: 20px;
+    text-shadow: 0 0 10px rgba(238, 237, 237, 0.5);
+}
+nav ul
+{
+    display: flex;
+    gap: 10px;
+    margin: 30px;
+}
+nav ul li
+{
+    list-style: none;
+}
+nav ul li a
+{
+    text-decoration: none;
+    color: wheat;
+    font-size: 1.5rem;
+    transition: 1s;
+    padding: 7px;
+}
+nav ul li a:hover
+{
+    border-radius: 20px;
+    background-color: #229889;
+    color: white;
+}
+.active
+{
+    border-radius: 20px;
+    background-color: #229889;
+    color: white;
+
+}
+/* Tambahkan CSS untuk hamburger icon */
+.hamburger-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: all 0.3s;
+}
+
+#menu-toggle-checkbox:checked + .hamburger-icon span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-toggle-checkbox:checked + .hamburger-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle-checkbox:checked + .hamburger-icon span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Tambahkan CSS untuk nav-list */
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#menu-toggle-checkbox {
+  display: none;
+}
+
+/* Tambahkan CSS untuk responsif */
+@media (max-width: 768px) {
+  .hamburger-icon {
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-left: 0;
+    margin-right: 0;
+    z-index: 1000;
+  }
+  
+  #menu-toggle-checkbox:checked ~ .nav-list {
+    display: flex;
+  }
+}
+.benner{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 85px;
+}
+.benner img{
+  position: absolute;
+  bottom: 0;
+}
+.teks h1
+{
+  font-size: 40px;
+}
+.teks
+{
+  background-color: #2D8681;
+  padding: 60px;
+  color: white;
+  text-align: center;
+  position: relative; /* tambahkan properti position */
+  z-index: 10;
+}
+.teks p
+{
+  font-size: larger;
+}
